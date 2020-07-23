@@ -1,0 +1,21 @@
+{
+  "name": "wallet-cms",
+  "version": "1.0.0",
+  "description": "Keystone JS CMS for App Seven Wallet",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Felipe Chama",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "keystone": "^4.0.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
