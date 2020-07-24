@@ -1,15 +1,15 @@
 const keystone = require('keystone');
 const { getUserId } = require('../utils/user');
+const { getStocksUser } = require('../utils/wallet');
 
 const getWalletUser = async (userSlug) => {
   const userId = await getUserId(userSlug);
-
-  // TODO
-  // usar a variável userId acima para pegar as ordens de compra/venda
-  // do usuário e retornar a carteira de ações
+  const userOrdersStocks = await getStocksUser(userId);
 
   return {
-    wallet: [],
+    wallet: {
+      exampleOrdersUser: userOrdersStocks,
+    },
   };
 };
 

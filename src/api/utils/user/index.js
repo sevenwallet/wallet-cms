@@ -6,14 +6,9 @@ const getUserId = async (userSlug) => {
     slug: userSlug
   };
 
-  const userData = await PlayerModel.model.findOne(filter, (err, item) => {
-    if(err) {
-      console.log('err', err);
-      return null;
-    }
-
-    return item;
-  });
+  const userData = await PlayerModel.model.findOne(filter)
+    .then((item) => item)
+    .catch((err) => console.log('err', err));
 
   return userData._id;
 };
